@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+
+        android:layout_height="192dp"
+        android:layout_width="match_parent">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:contentScrim="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|enterAlways|enterAlwaysCollapsed"
+            app:title="@string/semester_gpa"
+            app:toolbarId="@+id/toolbar">
+
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize">
+
+            </androidx.appcompat.widget.Toolbar>
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/ic_arrow_forward"
+                android:layout_marginTop="16dp"
+                android:layout_gravity="end"
+                />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end
+"
+                android:background="@android:color/transparent"
+                android:text="@string/cumulative_gpa"
+                android:textColor="@color/White"
+                android:onClick="intent"
+                android:layout_marginTop="16dp"
+                android:paddingRight="48dp"
+                android:paddingLeft="48dp"/>
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="655dp"
+        android:background="@color/colorDark"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorDark"
+            android:orientation="vertical"
+            tools:context=".MainActivity">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginLeft="16dp"
+                            android:gravity="center"
+                            android:text="@string/select_a_faculty"
+                            android:textColor="@color/White"
+                            android:textSize="18sp" />
+
+                        <Spinner
+                            android:id="@+id/fSpinner"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginRight="16dp"
+                            android:popupBackground="@color/White"
+                            android:spinnerMode="dropdown" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginRight="16dp"
+                        android:background="@drawable/semi_round"
+                        android:gravity="center"
+                        android:padding="8dp">
+
+                        <Button
+                            android:id="@+id/deleteButton"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_margin="6dp"
+                            android:background="@drawable/ic_icons8_office"
+                            android:elevation="10dp"
+                            android:onClick="undo"
+                            android:shadowColor="#000000" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="6dp"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="start"
+                                android:text="@string/hours"
+                                android:textColor="@color/colorDark"
+                                android:textSize="18sp" />
+
+                            <Spinner
+                                android:id="@+id/hoursSpinner"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:clickable="true"
+                                android:elevation="10dp"
+                                android:focusable="true"
+                                android:shadowColor="#000000"
+                                android:spinnerMode="dropdown" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="50dp"
+                            android:layout_margin="6dp"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/pnttext"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="start"
+                                android:text="@string/points"
+
+                                android:textColor="@color/colorDark"
+                                android:textSize="18sp" />
+
+                            <Spinner
+                                android:id="@+id/pntsSpinner"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/pnttext"
+                                android:clickable="true"
+                                android:elevation="10dp"
+                                android:focusable="true"
+                                android:shadowColor="#000000" />
+
+                        </LinearLayout>
+
+
+                        <Button
+                            android:id="@+id/plusButton"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_margin="6dp"
+                            android:background="@drawable/ic_plus"
+                            android:onClick="add" />
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:id="@+id/resultTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="250dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginRight="16dp"
+                        android:background="@color/White"
+                        android:gravity="center"
+                        android:textColor="@color/colorDark"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/gpaTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginRight="16dp"
+                        android:background="@drawable/round"
+                        android:elevation="10dp"
+                        android:gravity="center"
+                        android:shadowColor="#000000"
+                        android:textColor="@color/colorDark"
+                        android:textSize="20sp" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp">
+
+                        <Button
+                            android:id="@+id/resetButton"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginStart="53dp"
+                            android:layout_marginLeft="53dp"
+                            android:layout_marginBottom="16dp"
+                            android:background="@drawable/ic_reset"
+                            android:elevation="10dp"
+                            android:onClick="reset"
+                            android:shadowColor="#0000" />
+
+                        <Button
+                            android:id="@+id/calcButton"
+                            android:layout_width="56dp"
+                            android:layout_height="56dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginEnd="50dp"
+                            android:layout_marginRight="50dp"
+                            android:layout_marginBottom="16dp"
+                            android:background="@drawable/ic_calculate"
+                            android:elevation="10dp"
+                            android:onClick="calculate"
+                            android:shadowColor="#0000"
+                            android:shadowDx="30"
+                            android:shadowDy="30"
+                            android:shadowRadius="55" />
+
+                    </RelativeLayout>
+                </LinearLayout>
+            </RelativeLayout>
+
+        </ScrollView>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+

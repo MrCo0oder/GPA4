@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">GPA4</string>
+    <string name="calculate">احسب</string>
+    <string name="add">لا يمكنك اضافة أكثر من 8 مواد!</string>
+    <string name="cumulative_gpa">المعدل التراكمي</string>
+    <string name="enter_its_all_total_hours">جميع ساعته</string>
+    <string name="enter_its_hours">ادخل ساعاته</string>
+    <string name="enter_the_last_cum_gpa">اخر معدل تراكمي</string>
+    <string name="enter_the_last_sem_gpa">آخر معدل فصلي</string>
+    <string name="hours">عدد الساعات</string>
+    <string name="points">النقاط</string>
+    <string name="select">ادخل مادة.</string>
+    <string name="select_a_faculty">اختر كليتك:</string>
+    <string name="semester_gpa">المعدل الفصلي</string>
+    <string name="stay">خليني هنا!🙂</string>
+    <string name="message">دورك جه عشان تضيف آخر معدل تراكمي ليك.</string>
+    <string name="Lets_go">يلا بينا !🚀</string>
+    <string name="emptyFields">أضف جميع الحقول المطلوبة!</string>
+    <string name="interstitial_ad_sample">إذا كنت ترغب في دعمنا ، فانقر على الزر أدناه وشاهد إعلانًا قصيرًا. 💖</string>
+</resources>

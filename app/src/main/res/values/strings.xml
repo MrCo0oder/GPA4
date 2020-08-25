@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">GPA4</string>
+    <string name="points">Points</string>
+    <string name="hours">Hours</string>
+    <string name="calculate">Calculate</string>
+    <string name="select">Enter a course!</string>
+    <string name="add">You can\'t add more than 8 Courses!</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="select_a_faculty">Select a faculty</string>
+    <string name="enter_the_last_cum_gpa">The last Cumulative GPA.</string>
+    <string name="enter_its_all_total_hours">All total hours.</string>
+    <string name="enter_the_last_sem_gpa">The last Semester GPA.</string>
+    <string name="enter_its_hours">Enter its hours.</string>
+    <string name="cumulative_gpa">Cumulative GPA</string>
+    <string name="semester_gpa">Semester GPA</string>
+    <string name="stay">Stay here!🙂</string>
+    <string name="message">Now, it\'s your turn to add your previous cumulative GPA.</string>
+    <string name="Lets_go">Lets go!🚀</string>
+
+    <string name="emptyFields">Fill all Fields,please!</string>
+    <string name="interstitial_ad_sample">If you want to support us click on the button below and watch a short advertisement. 💖</string>
+
+
+</resources>
